@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+    style
+        include ../public/css/styles.css
+       
+    title NODE REGISTRATION FORM
+  body
+    div.container
+        br
+        h1.text-center Refactory sign-up form
+        hr
+        
+        div.row.justify-content-center
+            div.col-md-6
+                div.card
+                    header.card-header
+                        a.float-right.btn.btn-outline-primary.mt-1(href="#") Log in
+                        h4.card-title.mt-2 Sign Up
+                    article.card-body
+                        form.form-signin(method="POST" action="/register")
+                            img.mb-4(src="..../" alt="" width="72" height="72")
+                            h1.h3mb-3.font-weight-normal Please sign in
+                            label(for="inputEmail").sr-only Email address
+                            input(type="text" placeholder="Email address"  name="username" required autofocus)#inputEmail.form-control
+                            br
+                            label(for="inputPassword").sr-only Password
+                            input(type="password" placeholder="Password" name="password" required)#inputPassword.form-control 
+                            br
+                            div.checkbox.mb-3.text-center
+                                label  Remember me
+                                input(type="checkbox" value="remember-me")
+                                button.btn.btn-lg.btn-primary.btn-block(type="submit") Sign in
+                                p.mt-5.mb-3.text-muted &copy; 2017-2019

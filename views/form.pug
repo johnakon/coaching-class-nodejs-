@@ -1,0 +1,83 @@
+doctype html
+html(lang="en")
+  head
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title NODE REGISTRATION FORM
+  body
+    div.container
+        br
+        h1.text-center Refactory sign-up form
+        hr
+        
+        div.row.justify-content-center
+            div.col-md-6
+                div.card
+                    header.card-header
+                        a.float-right.btn.btn-outline-primary.mt-1(href="#") Log in
+                        h4.card-title.mt-2 Sign Up
+                    article.card-body
+                        form.form(method="POST" action="/register")
+                            div.form-row
+                                div.col.form-group
+                                    label(for="first_name") First Name 
+                                    input.form-control(name="firstname")
+                                div.col.form-group
+                                    label(for="last_name") Last Name
+                                    input.form-control(name="lastname")
+                            
+                            div.form-group
+                                label(for="email")
+                                input.form-control(type="email" placeholder = " ")
+                                small.form-text.text-muted We'll never share your email with anyone else.
+
+                            div.form-group
+                                label.form-check.form-check-inline
+                                    input.form-check-input(type="radio" name="gender" value="Female")
+                                    span.form-check-label Female
+
+                                label.form-check.form-check-inline
+                                    input.form-check-input(type="radio" name="gender" value="Male")
+                                    span.form-check-label Male
+
+                            div.form-row
+                                div.col-md-6.form-group
+                                    label City
+                                    input.form-control(type="text" name="city")
+                                
+                                div.col-md-6.form-group
+                                    label Country
+                                    select#inputState.form-control(name="country")
+                                        option Choose.......
+                                        option(value="Uzbekistan") Uzbekistan
+                                        option(value="Russia") Russia
+                                        option(value="United States") United States
+                                        option(value="Uganda") Uganda
+                                        option(value="India") India
+                                        option(value="Afghanistan") Afghanistan
+
+                            div.form-group
+                                label Create password
+                                input.form-control(type="password" name="password")
+
+                            div.form-group
+                                button.btn.btn-primary.btn-block(type="submit") Register
+                            
+                            small.text-muted By clicking the 'Sign Up' button, you confirm that you accept our
+                                br
+                                Terms of use and Privacy Policy
+
+                    div.border-top.card-body.text-center Have an account? 
+                        a(href="") Register
+                            
+    
+    
+    
+    
+    
+    
+    script(src="/js/jquery-3.3.1.min.js" type="text/javascript")
+    script(src="/js/popper.min.js" type="text/javascript")
+    script(src="/js/bootstrap.min.js" type="text/javascript")
